@@ -32,7 +32,7 @@ int main() {
 
     reserveManager.agregarPasajero(busManager.getBusList(),passanger1);
     cout<<"Main"<<endl;
-    cout<<busManager.getBusList().data()[0].getPassangerList().size();
+    cout<<busManager.getBusList()[0].getPassangerList().size();
 
 
 

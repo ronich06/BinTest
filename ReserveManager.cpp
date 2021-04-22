@@ -5,13 +5,13 @@
 #include "ReserveManager.h"
 void ReserveManager::agregarPasajero(vector<Bus> vectorBuses,Passanger* passanger) {
     for (int i = 0; i <= vectorBuses.size(); i++) {
-        int Maxsize = (vectorBuses.data()[i].getSitCapacity()) / 2;
-        if (vectorBuses.data()[i].getPassangerList().size() < Maxsize) {
-            vectorBuses.data()[i].addPassanger(passanger);
-            vectorBuses.data()[i].addPassanger(passanger);
-            cout<<vectorBuses.data()[i].getPassangerList().size()<<endl;
+        int Maxsize = (vectorBuses[i].getSitCapacity()) / 2;
+        if (vectorBuses[i].getPassangerList().size() < Maxsize) {
+            vectorBuses[i].addPassanger(passanger);
+            vectorBuses[i].addPassanger(passanger);
+            cout<<vectorBuses[i].getPassangerList().size()<<endl;
             //vectorBuses.data()[i].getPassangerList().resize(6);
-            cout<<vectorBuses.data()[i].getPassangerList().size()<<endl;
+            cout<<vectorBuses[i].getPassangerList().size()<<endl;
             break;
         }
     }
