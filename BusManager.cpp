@@ -14,4 +14,13 @@ const vector<Bus *> &BusManager::getBusList() const {
     return busList;
 }
 
+string BusManager::toString() {
+    stringstream s;
+    for(int i=0; i < busList.size(); i++){
+        s<<"Bus: #"<<i<<endl;
+        s<<busList[1]->toString();
+    }
+    return s.str();
+}
+
 

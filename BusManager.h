@@ -14,8 +14,8 @@ class BusManager{
 public:
     BusManager()=default;
     void addBus(Bus* bus);
-
     const vector<Bus *> &getBusList() const;
+    string toString();
 };
 
 
