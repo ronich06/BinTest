@@ -11,7 +11,7 @@ using namespace std;
 
 class ReserveManager {
 public:
-    void agregarPasajero(vector<Bus*>,Passanger*);
+    void agregarPasajero(vector<Bus*>,vector<Passanger*>);
     void agregarGrupoDePasajeros(vector<Bus>,Passanger*);
     string mostrarDetallePasajeros(vector<Bus>);
 

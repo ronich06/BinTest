@@ -19,6 +19,10 @@ int main() {
     busManager.addBus(bus1);
     busManager.addBus(bus2);
 
+    vector<Passanger> passangers1
+
+
+
     reserveManager.agregarPasajero(busManager.getBusList(),passanger1);
     cout<<"Main"<<endl;
     cout<<busManager.getBusList().data()[0]->getPassangerList().size()<<endl;
