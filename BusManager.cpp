@@ -27,4 +27,18 @@ Bus *BusManager::createBus(string brand, string model, string color, string driv
     return new Bus(brand,model,color,driverName, sitCapacity);
 }
 
+string BusManager::showDistribution() {
+
+    stringstream s;
+    for(int i=0; i < busList.size(); i++){
+        s<<"Bus: #"<<i<<endl;
+        int j=0;
+        while( j < busList[i]->getPassangerList().size()) {
+            s << busList[i]->getPassangerList()[j].toString();
+            j++;
+        }
+    }
+    return s.str();
+}
+
 
