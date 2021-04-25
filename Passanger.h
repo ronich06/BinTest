@@ -4,25 +4,16 @@
 
 #ifndef UNTITLED1_PASSANGER_H
 #define UNTITLED1_PASSANGER_H
-#include <iostream>
-#include <vector>
-#include <sstream>
-using namespace std;
+#include "Person.h"
 
-class Passanger {
-    string name;
+class Passanger:public Person {
 public:
-    Passanger();
+    Passanger()= default;
 
-    Passanger(string);
+    Passanger(const string &name);
 
     virtual ~Passanger();
 
-    const string &getName() const;
-
-    void setName(const string &name);
-
-    string toString();
 };
 
 
