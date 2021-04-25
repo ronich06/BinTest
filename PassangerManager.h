@@ -14,7 +14,7 @@ public:
     PassangerManager()=default;
     void addPassanger(Passanger*);
 
-    const vector<Passanger *> &getPassangerList() const;
+    const vector<Passanger *> &getPassangerList();
 };
 
 #endif //UNTITLED1_PASSANGERMANAGER_H
