@@ -17,6 +17,7 @@ public:
     const vector<Bus *> &getBusList() const;
     Bus* createBus(string,string,string,string,int);
     string toString();
+    string showDistribution();
 };
 
 
