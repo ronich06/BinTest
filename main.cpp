@@ -23,6 +23,10 @@ int main() {
 
     passangerManager.addPassanger(passanger1);
     passangerManager.addPassanger(passanger2);
+    passangerManager.addPassanger(passanger2);
+    passangerManager.addPassanger(passanger2);
+
+
 
 
     //cout<<passangerManager.getPassangerList()[2]->toString();

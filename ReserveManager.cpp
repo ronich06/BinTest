@@ -7,12 +7,12 @@ void ReserveManager::agregarPasajero(vector<Bus*> vectorBuses,vector<Passanger*>
 
     for (int i = 0; i < vectorBuses.size(); i++) {
         int Maxsize = (vectorBuses.data()[i]->getSitCapacity()) / 2;
-        for (int j = 0; j < vectorPassanger.size(); j++) {
             if (vectorPassanger.size() + 1 <= Maxsize - vectorBuses.data()[i]->getPassangerList().size()) {
+                for (int j = 0; j < vectorPassanger.size(); j++) {
                 vectorBuses.data()[i]->addPassanger(vectorPassanger.data()[j]);
 
-            }
-        }break;
+            }break;
+        }
     }
 }
 
