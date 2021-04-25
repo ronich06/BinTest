@@ -49,7 +49,7 @@ void Bus::setDriverName(const string &driverName) {
 Bus::~Bus()=default;
 
 void Bus::addPassanger(Passanger* passanger){
-    passangerList.push_back(* passanger);
+    passangerList.push_back(*passanger);
 }
 
 vector<Passanger> Bus::getPassangerList(){

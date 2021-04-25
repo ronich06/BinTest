@@ -4,12 +4,14 @@
 #include "Passanger.h"
 #include "ReserveManager.h"
 #include "BusManager.h"
+#include "PassangerManager.h"
 using namespace std;
 
 
 int main() {
     ReserveManager reserveManager;
     BusManager busManager;
+    PassangerManager passangerManager;
     Bus* bus1  = new Bus("dad","dad","dad","dad",10);
     Bus* bus2  = new Bus("dad","dad","dad","dad",20);
 
@@ -19,17 +21,14 @@ int main() {
     busManager.addBus(bus1);
     busManager.addBus(bus2);
 
-    vector<Passanger> passangers1
+    passangerManager.addPassanger(passanger1);
+    passangerManager.addPassanger(passanger2);
 
 
+    //cout<<passangerManager.getPassangerList()[2]->toString();
 
-    reserveManager.agregarPasajero(busManager.getBusList(),passanger1);
-    cout<<"Main"<<endl;
-    cout<<busManager.getBusList().data()[0]->getPassangerList().size()<<endl;
-    reserveManager.agregarPasajero(busManager.getBusList(),passanger2);
-    cout<<busManager.getBusList().data()[0]->getPassangerList().size()<<endl;
-    reserveManager.agregarPasajero(busManager.getBusList(),passanger2);
-    cout<<busManager.getBusList().data()[1]->getPassangerList().size()<<endl;
+    reserveManager.agregarPasajero(busManager.getBusList(),passangerManager.getPassangerList());
+
 
     for(int j = 0; j < busManager.getBusList().size();j++){
         cout<<"Bus: "<< j+1<<endl;
@@ -40,5 +39,6 @@ int main() {
    /* for(int i=0;i<busManager.getBusList().size();i++){
         cout<<busManager.getBusList().data()[i]->toString();
     }*/
+
     return 0;
 }

@@ -10,6 +10,6 @@ void PassangerManager::addPassanger(Passanger* passanger ) {
 }
 
 
-const vector<Passanger *> &PassangerManager::getPassangerList() const {
+const vector<Passanger *> &PassangerManager::getPassangerList() {
     return passangerList;
 }
