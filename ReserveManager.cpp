@@ -4,16 +4,18 @@
 
 #include "ReserveManager.h"
 void ReserveManager::agregarPasajero(vector<Bus*> vectorBuses,vector<Passanger*> vectorPassanger) {
-
+    Passanger* covidSpace = new Passanger("Covid sit");
     for (int i = 0; i < vectorBuses.size(); i++) {
-        int Maxsize = (vectorBuses.data()[i]->getSitCapacity()) / 2;
-            if (vectorPassanger.size() + 1 <= Maxsize - vectorBuses.data()[i]->getPassangerList().size()) {
+            if (vectorPassanger.size() + 1 <= vectorBuses.data()[i]->getSitCapacity() - vectorBuses.data()[i]->getPassangerList().size() || vectorPassanger.size() == vectorBuses.data()[i]->getSitCapacity() ) {
                 for (int j = 0; j < vectorPassanger.size(); j++) {
                 vectorBuses.data()[i]->addPassanger(vectorPassanger.data()[j]);
-
-            }break;
+            }
+                if(vectorPassanger.size() != vectorBuses.data()[i]->getSitCapacity()){
+                vectorBuses.data()[i]->addPassanger(covidSpace);}
+                break;
         }
     }
+
 }
 
 string ReserveManager::mostrarDetallePasajeros(vector<Bus> vectorBUses){

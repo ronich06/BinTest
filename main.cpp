@@ -12,27 +12,30 @@ int main() {
     ReserveManager reserveManager;
     BusManager busManager;
     PassangerManager passangerManager;
+
     Bus* bus1  = new Bus("dad","dad","dad","dad",10);
     Bus* bus2  = new Bus("dad","dad","dad","dad",20);
+    Bus* bus3  = new Bus("dad","dad","dad","dad",23);
 
     Passanger* passanger1 = new Passanger("PEPE");
     Passanger* passanger2 = new Passanger("Pablo");
 
     busManager.addBus(bus1);
     busManager.addBus(bus2);
+    busManager.addBus(bus3);
 
-    passangerManager.addPassanger(passanger1);
     passangerManager.addPassanger(passanger2);
     passangerManager.addPassanger(passanger2);
     passangerManager.addPassanger(passanger2);
+    passangerManager.addPassanger(passanger2);
+    passangerManager.addPassanger(passanger2);
 
-
-
-
-    //cout<<passangerManager.getPassangerList()[2]->toString();
 
     reserveManager.agregarPasajero(busManager.getBusList(),passangerManager.getPassangerList());
 
+   // passangerManager.getPassangerList().clear();
+
+    //reserveManager.agregarPasajero(busManager.getBusList(),passangerManager.getPassangerList());
 
     for(int j = 0; j < busManager.getBusList().size();j++){
         cout<<"Bus: "<< j+1<<endl;

@@ -64,11 +64,11 @@ string Bus::toString(){
     out<<"Sitting capacity: "<<getSitCapacity()<<endl;
     out<<"Driver's name"<<getDriverName()<<endl;
 
-    out.str();
+    return out.str();
 }
 
 int Bus::getSitCapacity() const {
-    return sitCapacity;
+    return sitCapacity/2;
 }
 
 void Bus::setSitCapacity(int sitCapacity) {
